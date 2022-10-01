@@ -15,12 +15,12 @@ export const mapCharacterFromApiToVm = (
   };
 };
 
-export const mapCharacterFromVmToApi = (character: viewModel.Character): apiModel.Character =>
+export const mapCharacterFromVmToApi = (character: apiModel.Character): apiModel.Character =>
   (({
     ...character,
   } as unknown) as apiModel.Character);
 
-export const mapLocationApiToLookup = (location: viewModel.LocationApi): Lookup =>
+export const mapLocationApiToLookup = (location: apiModel.LocationApi): Lookup =>
   (({
     id: location.name,
     name: location.name,

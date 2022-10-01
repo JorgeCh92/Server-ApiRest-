@@ -42,6 +42,10 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
             name="gender"
             label="Gender"
           />
+          <TextFieldComponent
+            name="bestSentences"
+            label="Best sentences"
+          />
           <Button type="submit" variant="contained" color="primary">
             Save
           </Button>

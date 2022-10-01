@@ -13,7 +13,6 @@ export interface CharacterEntityApi {
     name: string,
     url: string
   },
-  bestSentences: string[];
   image: string,
   episode: string[],
   url: string,

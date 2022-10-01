@@ -5,7 +5,7 @@ import { mockLocations, mockCharacterCollection } from './character.mock-data';
 export const getCharacter = async (id: string): Promise<Character | null> => {
   let characterApi: Character | null = null;
   try {
-    let characterEndpoint = `/api/character/${id}`;
+    let characterEndpoint = `${'https://rickandmortyapi.com/api'}/character/${id}`;
     const response = await fetch(characterEndpoint);
 
     if (response.ok) {
@@ -21,7 +21,7 @@ export const getCharacter = async (id: string): Promise<Character | null> => {
 export const getLocations = async (): Promise<LocationApi[]> => {
   let locationsApi: LocationApi[] = [];
   try {
-    let locationEndpoint = `/api/location`;
+    let locationEndpoint = `${'https://rickandmortyapi.com/api'}/location`;
     const response = await fetch(locationEndpoint);
 
     if (response.ok) {

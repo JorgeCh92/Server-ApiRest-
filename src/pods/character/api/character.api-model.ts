@@ -7,7 +7,6 @@ export interface Character {
   "gender": string,
   "origin": Origin;
   "location": Location;
-  bestSentences: string[];
   "image": string,
   "episode": string[],
   "url": string,
