@@ -18,6 +18,7 @@ interface Props {
 
 export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
   const { character, locations, onSave } = props;
+  const stringSentences = character.bestSentences;
 
   return (
     <Formik
@@ -43,8 +44,9 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
             label="Gender"
           />
           <TextFieldComponent
-            name="bestSentences"
-            label="Best sentences"
+            name="stringSentences"
+            label="Best quotes"
+            defaultValue={stringSentences}
           />
           <Button type="submit" variant="contained" color="primary">
             Save

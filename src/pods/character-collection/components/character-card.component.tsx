@@ -36,9 +36,11 @@ export const CharacterCard: React.FunctionComponent<Props> = (props) => {
             title={Character.name}
             style={{ height: 0, paddingTop: '56.25%' }}
           />
-          <Typography variant="subtitle1" gutterBottom>
-            {Character.gender}
-          </Typography>
+          {Character.bestSentences.length > 0 && 
+            <Typography variant="subtitle1" gutterBottom>
+              { '"' + Character.bestSentences.join('", "') + '"' }
+            </Typography>
+          }
         </div>
       </CardContent>
       <CardActions>

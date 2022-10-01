@@ -22,7 +22,8 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
       "https://rickandmortyapi.com/api/episode/6"
     ],
     "url": "https://rickandmortyapi.com/api/character/92",
-    "created": "2017-12-01T11:20:51.247Z"
+    "created": "2017-12-01T11:20:51.247Z",
+    "bestSentences": []
   },
   {
     "id": 207,
@@ -46,7 +47,8 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
       "https://rickandmortyapi.com/api/episode/17"
     ],
     "url": "https://rickandmortyapi.com/api/character/207",
-    "created": "2017-12-30T13:54:28.627Z"
+    "created": "2017-12-30T13:54:28.627Z",
+    "bestSentences": []
   },
   {
     "id": 323,
@@ -68,7 +70,8 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
       "https://rickandmortyapi.com/api/episode/23"
     ],
     "url": "https://rickandmortyapi.com/api/character/323",
-    "created": "2018-01-05T15:13:46.862Z"
+    "created": "2018-01-05T15:13:46.862Z",
+    "bestSentences": []
   },
   {
     "id": 393,
@@ -90,6 +93,7 @@ export const mockCharacterCollection: CharacterEntityApi[] = [
       "https://rickandmortyapi.com/api/episode/13"
     ],
     "url": "https://rickandmortyapi.com/api/character/393",
-    "created": "2018-01-20T19:15:27.239Z"
+    "created": "2018-01-20T19:15:27.239Z",
+    "bestSentences": []
   }
 ];

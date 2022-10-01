@@ -38,3 +38,35 @@ export const getLocations = async (): Promise<LocationApi[]> => {
 export const saveCharacter = async (character: Character): Promise<boolean> => {
   return true;
 };
+
+export const getCharacterBestSentences = async (id: number): Promise<string[]> => 
+  (await (await fetch(`api/bestSentences?id=${id}`)).json())[0]?.bestSentences ?? [];
+
+  export const setCharacterBestSentences = 
+  async (id: number, bestSentences: string[]): Promise<boolean> => {
+    const res = await (await fetch(`api/bestSentences/${id}`, {
+        method: 'put',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id, bestSentences })
+      }
+    )).json()
+    if (Object.keys(res).length === 0) createCharacterBestSentences(id, bestSentences)
+    return true
+  };
+
+  const createCharacterBestSentences = 
+  async (id: number, bestSentences: string[]): Promise<boolean> => 
+  (await fetch('api/bestSentences', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ id, bestSentences })
+    }
+  )).json();
+
+

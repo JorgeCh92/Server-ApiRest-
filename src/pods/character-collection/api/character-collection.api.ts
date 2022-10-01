@@ -17,6 +17,10 @@ export const getCharacterCollection = async (): Promise<CharacterEntityApi[]> =>
   return characterListApi;
 };
 
+export const getCharacterBestSentences = async (id: number): Promise<string[]> => 
+  (await (await fetch(`api/bestSentences?id=${id}`)).json())[0]?.bestSentences ?? []
+
+
 export const deleteCharacter = async (id: number): Promise<boolean> => {
   characterCollection = characterCollection.filter((h) => h.id !== id);
   return true;
